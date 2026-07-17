@@ -163,7 +163,7 @@ String literals must be enclosed in single quotes or double quotes:
 
 This advanced JsonPath rule extraction usage applies to:
 
-- Extracting JSON data from the return value of the Touch Sprite **Send Request Step**.
+- Extracting JSON data from the return value of the FlowNexaX **Send Request Step**.
 - Extracting a specific JSON value into a new variable in **Variable Control**.
 
 Use these rules when a simple fixed JSON path is not flexible enough, such as when you need to extract multiple items, filter arrays, match regular expressions, or calculate array length.

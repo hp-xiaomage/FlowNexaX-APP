@@ -1,6 +1,6 @@
 # 💯 当前教程对应的是3.8.1及之后的版本💯
 
-3.8.1版本开始，触控精灵升级了引擎，支持更多常规的语法。
+3.8.1版本开始，FlowNexaX升级了引擎，支持更多常规的语法。
 
 # 运行JS代码
 
@@ -12,13 +12,13 @@
 > * JavaScript 教程: [https://www.runoob.com/js/js-tutorial.html](https://www.runoob.com/js/js-tutorial.html)
 > * JS 入门教程: [http://c.biancheng.net/js/](http://c.biancheng.net/js/)
 
-除了 JS 引擎通用能力外，触控精灵内还扩展了以下能力：
+除了 JS 引擎通用能力外，FlowNexaX内还扩展了以下能力：
 
 ### 建议
 
 ```js
 
-手机端写JS代码相对麻烦，建议用电脑写完后复制到触控精灵中，长按app内的js编辑框，有PASTE黏贴按键，也有其他的按键，比如撤销、重写、剪切、复制、全选；
+手机端写JS代码相对麻烦，建议用电脑写完后复制到FlowNexaX中，长按app内的js编辑框，有PASTE黏贴按键，也有其他的按键，比如撤销、重写、剪切、复制、全选；
 
 当然了，对于编写代码来讲，还是不适合用手机来写，请注意，在app内编写代码时，用中文输入法会存在输入时会先删除前一个字符，这是输入法的问题，还是建议你用电脑写完发给手机。
 
@@ -30,7 +30,7 @@ app中的编写框会帮你检测JS语法的正确与否，在左侧的行数有
 
 ```js
 
-// 获取当前触控精灵App 版本号，如“3.4.0”
+// 获取当前FlowNexaXApp 版本号，如“3.4.0”
 var version=getAppVersion();
 log(version);
 

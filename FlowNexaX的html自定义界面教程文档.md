@@ -1,13 +1,13 @@
 # 💯 当前教程对应的是4.4.3及之后的版本💯
 
-4.4.3版本开始，触控精灵支持自定义界面可以写代码的方式自定义展示的样式。
+4.4.3版本开始，FlowNexaX支持自定义界面可以写代码的方式自定义展示的样式。
 
 你需要关注以下几个方法
 
 ```
-ckjl这四个字母代表的是调用触控精灵的接口。
+ckjl这四个字母代表的是调用FlowNexaX的接口。
 //onJSError方法能实现把html文件中的错误发送到触控的运行日志中
-ckjl.onJSError("传错误信息给触控精灵到运行日志中");
+ckjl.onJSError("传错误信息给FlowNexaX到运行日志中");
 
 //getVar方法相当于获取变量的内容
 ckjl.getVar("系统-字")
@@ -78,7 +78,7 @@ ckjl.addSysVar(6,'系统-时','演示分组','08:22:58');
 
 　
 
-//下面是你可以直接复制拿去运行的代码，注意触控精灵版本要455版本及以上
+//下面是你可以直接复制拿去运行的代码，注意FlowNexaX版本要455版本及以上
 
 ```
         <!DOCTYPE html>
@@ -182,7 +182,7 @@ ckjl.addSysVar(6,'系统-时','演示分组','08:22:58');
                ckjl.addSysVar(3,'系统-坐单','演示分组','500,500');
                ckjl.addSysVar(4,'系统-坐多','演示分组','100,200;400,400');
                ckjl.addSysVar(1,'系统-city','演示分组','上海');
-               //以上addSysVar方法需要 触控精灵455版本才支持
+               //以上addSysVar方法需要 FlowNexaX455版本才支持
        
                 document.getElementById("name").value = ckjl.getVar("系统-mmm");
 

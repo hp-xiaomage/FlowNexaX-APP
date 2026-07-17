@@ -30,13 +30,13 @@ Very important!
 
 Then create a `labels.txt` file on your computer. Fill in the content according to the actual labels of your model. For example, write one label per line according to the categories used by your model.
 
-## 2. Import the YOLO Model into Touch Sprite
+## 2. Import the YOLO Model into FlowNexaX
 
 Package the required YOLO model files into a compressed archive.
 
-Then send the compressed file to yourself through Telegram, a browser, or another file transfer method. Make sure Touch Sprite is already installed on your phone, then choose to open the compressed file with Touch Sprite.
+Then send the compressed file to yourself through Telegram, a browser, or another file transfer method. Make sure FlowNexaX is already installed on your phone, then choose to open the compressed file with FlowNexaX.
 
-Touch Sprite will automatically import the model.
+FlowNexaX will automatically import the model.
 
 Telegram contact/link:
 
@@ -48,8 +48,8 @@ The YOLO plugin should be downloaded from the Telegram link below:
 
 https://t.me/flownexax
 
-After downloading the compressed package of the YOLO plugin, the import method is exactly the same as importing the model above: choose to open it with Touch Sprite, and it will be imported automatically.
+After downloading the compressed package of the YOLO plugin, the import method is exactly the same as importing the model above: choose to open it with FlowNexaX, and it will be imported automatically.
 
 ## Notes
 
-After importing both the YOLO model and YOLO plugin, you can use YOLO-related APIs in Touch Sprite scripts, such as `yoloRunModel`, according to the JS tutorial documentation.
+After importing both the YOLO model and YOLO plugin, you can use YOLO-related APIs in FlowNexaX scripts, such as `yoloRunModel`, according to the JS tutorial documentation.

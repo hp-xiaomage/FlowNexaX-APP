@@ -1,13 +1,13 @@
 # 💯 This tutorial applies to version 4.4.3 and later 💯
 
-Starting from version 4.4.3, Touch Sprite supports custom interfaces and allows you to customize the display style by writing code.
+Starting from version 4.4.3, FlowNexaX supports custom interfaces and allows you to customize the display style by writing code.
 
 You need to pay attention to the following methods:
 
 ```
-The four letters ckjl represent calls to the Touch Sprite API.
-// The onJSError method can send errors from the HTML file to Touch Sprite's runtime log.
-ckjl.onJSError("Pass the error message to Touch Sprite and write it to the runtime log");
+The four letters ckjl represent calls to the FlowNexaX API.
+// The onJSError method can send errors from the HTML file to FlowNexaX's runtime log.
+ckjl.onJSError("Pass the error message to FlowNexaX and write it to the runtime log");
 
 // The getVar method is equivalent to getting the contents of a variable.
 ckjl.getVar("系统-字")
@@ -78,7 +78,7 @@ ckjl.addSysVar(6,'系统-时','Demo Group','08:22:58');
 
 　
 
-// The following code can be copied directly and run. Note that the Touch Sprite version must be 4.5.5 or later.
+// The following code can be copied directly and run. Note that the FlowNexaX version must be 4.5.5 or later.
 
 ```
         <!DOCTYPE html>
@@ -182,7 +182,7 @@ ckjl.addSysVar(6,'系统-时','Demo Group','08:22:58');
                ckjl.addSysVar(3,'系统-坐单','Demo Group','500,500');
                ckjl.addSysVar(4,'系统-坐多','Demo Group','100,200;400,400');
                ckjl.addSysVar(1,'系统-city','Demo Group','Shanghai');
-               // The addSysVar method above requires Touch Sprite version 4.5.5.
+               // The addSysVar method above requires FlowNexaX version 4.5.5.
        
                 document.getElementById("name").value = ckjl.getVar("系统-mmm");
 

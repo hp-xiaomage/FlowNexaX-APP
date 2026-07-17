@@ -1,6 +1,6 @@
 # 💯 This tutorial applies to version 3.8.1 and later 💯
 
-Starting from version 3.8.1, Touch Sprite upgraded its engine and supports more standard syntax.
+Starting from version 3.8.1, FlowNexaX upgraded its engine and supports more standard syntax.
 
 # Running JS Code
 
@@ -12,13 +12,13 @@ By writing JS code, you can implement the most flexible script logic control and
 > * JavaScript Tutorial: [https://www.runoob.com/js/js-tutorial.html](https://www.runoob.com/js/js-tutorial.html)
 > * JS Beginner Tutorial: [http://c.biancheng.net/js/](http://c.biancheng.net/js/)
 
-In addition to the general capabilities of the JS engine, Touch Sprite also extends the following capabilities:
+In addition to the general capabilities of the JS engine, FlowNexaX also extends the following capabilities:
 
 ### Recommendations
 
 ```js
 
-Writing JS code on a mobile phone is relatively troublesome. It is recommended to write it on a computer and then copy it into Touch Sprite. Long-press the JS editor box in the app; there is a PASTE button and other buttons such as undo, redo, cut, copy, and select all.
+Writing JS code on a mobile phone is relatively troublesome. It is recommended to write it on a computer and then copy it into FlowNexaX. Long-press the JS editor box in the app; there is a PASTE button and other buttons such as undo, redo, cut, copy, and select all.
 
 Of course, for writing code, it is still not suitable to write on a mobile phone. Please note that when writing code in the app, using a Chinese input method may delete the previous character while typing. This is an input method issue, so it is still recommended to write it on a computer and send it to the phone.
 
@@ -30,7 +30,7 @@ The editor box in the app will help you check whether the JS syntax is correct. 
 
 ```js
 
-// Get the current Touch Sprite app version number, such as "3.4.0".
+// Get the current FlowNexaX app version number, such as "3.4.0".
 var version=getAppVersion();
 log(version);
 
