@@ -21,6 +21,8 @@ FlowNexaX APP 可帮助残疾人无障碍使用手机，帮助自动化测试人
 
 - [FlowNexaX HTML Custom UI Tutorial Documentation](./FlowNexaX%20HTML%20Custom%20UI%20Tutorial%20Documentation.md)
 - [FlowNexaX JS Tutorial Documentation](./FlowNexaX%20JS%20Tutorial%20Documentation.md)
+- [FlowNexaX YOLO Model Import and Usage Tutorial](./FlowNexaX%20YOLO%20Model%20Import%20and%20Usage%20Tutorial.md)
+- [FlowNexaX Advanced JSON Extraction Rules Tutorial](./FlowNexaX%20Advanced%20JSON%20Extraction%20Rules%20Tutorial.md)
 
 ## Download / 下载
 
