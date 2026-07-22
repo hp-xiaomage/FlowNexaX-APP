@@ -30,3 +30,4 @@ FlowNexaX APP 可帮助残疾人无障碍使用手机，帮助自动化测试人
 
 - [Download FlowNexaX on Google Play](https://play.google.com/store/search?q=FlowNexaX&c=apps)
 - [前往 Google Play 应用市场下载 FlowNexaX](https://play.google.com/store/search?q=FlowNexaX&c=apps)
+- [FlowNexaX related files download / FlowNexaX 相关文件下载](https://drive.google.com/drive/folders/1YI4IADhPqw0T01bccNXSCBkr6pgr0q69?usp=sharing)
