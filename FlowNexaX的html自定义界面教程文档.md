@@ -10,34 +10,34 @@ ckjl这四个字母代表的是调用FlowNexaX的接口。
 ckjl.onJSError("传错误信息给FlowNexaX到运行日志中");
 
 //getVar方法相当于获取变量的内容
-ckjl.getVar("系统-字")
+ckjl.getVar("sys-字")
 
 //setVar方法就是给变量设置内容
-ckjl.setVar("系统-字", "这个内容是设置给变量的");
+ckjl.setVar("sys-字", "这个内容是设置给变量的");
 //setVar方法就是给变量设置内容，传入参数 true 代表变量内容要持久保持内容，支持系统变量
-ckjl.setVar("系统-字", "这个内容是设置给变量的",true);
-//setVar方法就是给变量设置内容，传入参数第一个 true 代表变量内容要持久保持，第二个 true 代表要存图片变量之前截图的位置，值支持系统变量
-ckjl.setVar("系统-图", "图片变量地址",true,true);
+ckjl.setVar("sys-字", "这个内容是设置给变量的",true);
+//setVar方法就是给变量设置内容，传入参数第一个 true 代表变量内容要持久保持，第二个 true 代表要存图片变量之前screenshot的位置，值支持系统变量
+ckjl.setVar("sys-图", "图片变量地址",true,true);
 
-//reqScreenshot方法代表你要给 系统-图 这个变量进行截图
-ckjl.reqScreenshot("系统-图"); //不传截图默认代表截图
-ckjl.reqScreenshot("系统-图","截图");
-ckjl.reqScreenshot("系统-图","截图并记录位置");
-ckjl.reqScreenshot("系统-图","不规则截图");
-ckjl.reqScreenshot("系统-图","不规则截图并记录位置");
+//reqScreenshot方法代表你要给 sys-图 这个变量进行screenshot
+ckjl.reqScreenshot("sys-图"); //不传screenshot默认代表screenshot
+ckjl.reqScreenshot("sys-图","screenshot");
+ckjl.reqScreenshot("sys-图","Take a screenshot and record the location");
+ckjl.reqScreenshot("sys-图","Irregular screenshots");
+ckjl.reqScreenshot("sys-图","Take irregular screenshots and record the location");
 
 
-//reqScreenshotBack方法是搭配reqScreenshot一起用的，代表你给 系统-图 这个变量进行截图成功后会通过reqScreenshotBack来告诉你截图成功，并且把截图的图片链接url传给你，而vname就是你前面reqScreenshot("系统-图")这个系统-图 变量名字。
+//reqScreenshotBack方法是搭配reqScreenshot一起用的，代表你给 sys-图 这个变量进行screenshot成功后会通过reqScreenshotBack来告诉你screenshot成功，并且把screenshot的图片链接url传给你，而vname就是你前面reqScreenshot("sys-图")这个sys-图 变量名字。
 function reqScreenshotBack(vname,url){}
 
-//reqSelPoint方法代表你要给 系统-坐单 这个变量进行屏幕选择坐标
-ckjl.reqSelPoint("系统-坐单");
-//reqSelPoint方法代表你要给 系统-坐多 这个坐标多个类型变量进行屏幕框选左上和右下坐标,449版本开始支持
-ckjl.reqSelPoint("系统-坐多","框选左上和右下坐标");
-//reqSelPoint方法代表你要给 系统-坐多 这个坐标多个类型变量进行屏幕选择多个坐标,449版本开始支持
-ckjl.reqSelPoint("系统-坐多");
+//reqSelPoint方法代表你要给 sys-坐单 这个变量进行屏幕选择坐标
+ckjl.reqSelPoint("sys-坐单");
+//reqSelPoint方法代表你要给 sys-坐多 这个坐标多个类型变量进行屏幕Frame selection of upper left and lower right coordinates,449版本开始支持
+ckjl.reqSelPoint("sys-坐多","Frame selection of upper left and lower right coordinates");
+//reqSelPoint方法代表你要给 sys-坐多 这个坐标多个类型变量进行屏幕选择多个坐标,449版本开始支持
+ckjl.reqSelPoint("sys-坐多");
 
-//reqSelPointBack方法是搭配reqSelPoint一起用的，代表你给 系统-坐单 这个变量进行屏幕选坐标成功后会通过reqSelPointBack来告诉你选取成功，并且把坐标内容pointContent传给你，而vname就是你前面reqSelPoint("系统-坐单")这个系统-坐单 变量名字。
+//reqSelPointBack方法是搭配reqSelPoint一起用的，代表你给 sys-坐单 这个变量进行屏幕选坐标成功后会通过reqSelPointBack来告诉你选取成功，并且把坐标内容pointContent传给你，而vname就是你前面reqSelPoint("sys-坐单")这个sys-坐单 变量名字。
 function reqSelPointBack(vname,pointContent){}
 
 
@@ -61,13 +61,13 @@ function reqSelPointBack(vname,pointContent){}
 ckjl.formZoom();
 
 //addSysVar方法，用户添加系统变量，455版本开始支持
-ckjl.addSysVar(1,'系统-字','演示分组','这是我的默认值');
-ckjl.addSysVar(2,'系统-数','演示分组','1');
-ckjl.addSysVar(3,'系统-坐单','演示分组','500,500');
-ckjl.addSysVar(4,'系统-坐多','演示分组','100,200;400,400');
-ckjl.addSysVar(5,'系统-图','演示分组');
-ckjl.addSysVar(1,'系统-字22');
-ckjl.addSysVar(6,'系统-时','演示分组','08:22:58');
+ckjl.addSysVar(1,'sys-字','演示分组','这是我的默认值');
+ckjl.addSysVar(2,'sys-数','演示分组','1');
+ckjl.addSysVar(3,'sys-坐单','演示分组','500,500');
+ckjl.addSysVar(4,'sys-坐多','演示分组','100,200;400,400');
+ckjl.addSysVar(5,'sys-图','演示分组');
+ckjl.addSysVar(1,'sys-字22');
+ckjl.addSysVar(6,'sys-时','演示分组','08:22:58');
 ```
 
 　
@@ -119,11 +119,11 @@ ckjl.addSysVar(6,'系统-时','演示分组','08:22:58');
         //         getVar: function (key) {
         //             console.log("ckjl.getVar called with key:", key);
         //             // 根据 key 返回测试数据
-        //             if (key === "系统-mmm") return "测试姓名";
-        //             if (key === "系统-分") return "male";
-        //             if (key === "系统-字") return "游泳,跑步";
+        //             if (key === "sys-mmm") return "测试姓名";
+        //             if (key === "sys-分") return "male";
+        //             if (key === "sys-字") return "游泳,跑步";
         //             if (key === "city") return "上海";
-        //             if (key === "系统-图") return "https://via.placeholder.com/100";
+        //             if (key === "sys-图") return "https://via.placeholder.com/100";
         //             return "";
         //         },
         //         setVar: function (key, value) {
@@ -175,35 +175,35 @@ ckjl.addSysVar(6,'系统-时','演示分组','08:22:58');
         }
             function loadData() {
             //演示添加系统变量，type内容为 1代表字符变量，2代表数字变量，3代表坐标单个变量，4代表坐标多个变量，5代表图片变量，6代表时间变量
-            ckjl.addSysVar(1,'系统-mmm','演示分组','这是我的默认值');
-               ckjl.addSysVar(1,'系统-分','演示分组','女');
-               ckjl.addSysVar(1,'系统-字','演示分组','跑步,音乐');
-               ckjl.addSysVar(5,'系统-图','演示分组');
-               ckjl.addSysVar(3,'系统-坐单','演示分组','500,500');
-               ckjl.addSysVar(4,'系统-坐多','演示分组','100,200;400,400');
-               ckjl.addSysVar(1,'系统-city','演示分组','上海');
+            ckjl.addSysVar(1,'sys-mmm','演示分组','这是我的默认值');
+               ckjl.addSysVar(1,'sys-分','演示分组','女');
+               ckjl.addSysVar(1,'sys-字','演示分组','跑步,音乐');
+               ckjl.addSysVar(5,'sys-图','演示分组');
+               ckjl.addSysVar(3,'sys-坐单','演示分组','500,500');
+               ckjl.addSysVar(4,'sys-坐多','演示分组','100,200;400,400');
+               ckjl.addSysVar(1,'sys-city','演示分组','上海');
                //以上addSysVar方法需要 FlowNexaX455版本才支持
        
-                document.getElementById("name").value = ckjl.getVar("系统-mmm");
+                document.getElementById("name").value = ckjl.getVar("sys-mmm");
 
-                let gender = ckjl.getVar("系统-分");
+                let gender = ckjl.getVar("sys-分");
                 let gel=document.getElementById("gender_" + gender);
                 if(gel)gel.checked = true;
 
-                let hobbies = ckjl.getVar("系统-字").split(",");
+                let hobbies = ckjl.getVar("sys-字").split(",");
                 hobbies.forEach(hobby => {
                     let el = document.getElementById("hobby_" + hobby);
                     if(el)el.checked = true;
                 });
 
                 // 回显城市
-                let city = ckjl.getVar("系统-city");
+                let city = ckjl.getVar("sys-city");
                 if (city) {
                     document.getElementById("cityDisplay").innerText = city;
                     document.getElementById("cityDropdown").setAttribute("data-value", city);
                 }
 
-                let avatar = ckjl.getVar("系统-图");
+                let avatar = ckjl.getVar("sys-图");
                 if (avatar) {
                     document.getElementById("avatar_img").src = avatar;
                 }
@@ -221,7 +221,7 @@ ckjl.addSysVar(6,'系统-时','演示分组','08:22:58');
             }
 
             function requestAvatar() {
-                ckjl.reqScreenshot("系统-图");
+                ckjl.reqScreenshot("sys-图");
             }
 
             function reqScreenshotBack(vname,url) {
@@ -229,7 +229,7 @@ ckjl.addSysVar(6,'系统-时','演示分组','08:22:58');
             }
 
              function requestPoint() {
-                ckjl.reqSelPoint("系统-坐单");
+                ckjl.reqSelPoint("sys-坐单");
             }
 
             function reqSelPointBack(vname,pointContent) {
@@ -237,10 +237,10 @@ ckjl.addSysVar(6,'系统-时','演示分组','08:22:58');
                 document.getElementById("name").value = pointContent;
             }
               function requestPoints() {
-                ckjl.reqSelPoint("系统-坐多");
+                ckjl.reqSelPoint("sys-坐多");
             }
             function requestPointarea() {
-                ckjl.reqSelPoint("系统-坐多","框选左上和右下坐标");
+                ckjl.reqSelPoint("sys-坐多","Frame selection of upper left and lower right coordinates");
             }
 
 
@@ -258,17 +258,17 @@ ckjl.addSysVar(6,'系统-时','演示分组','08:22:58');
 
             function submitForm() {
             //将设置好的内容都设置到变量里面去
-                ckjl.setVar("系统-mmm", document.getElementById("name").value);
+                ckjl.setVar("sys-mmm", document.getElementById("name").value);
 
                 let gender = document.querySelector("input[name='gender']:checked");
-                if (gender) ckjl.setVar("系统-分", gender.value);
+                if (gender) ckjl.setVar("sys-分", gender.value);
 
                 let selectedHobbies = Array.from(document.querySelectorAll("input[name='hobby']:checked"))
                     .map(el => el.value).join(",");
-                ckjl.setVar("系统-字", selectedHobbies);
+                ckjl.setVar("sys-字", selectedHobbies);
 
                 let city = document.getElementById("cityDropdown").getAttribute("data-value");
-                if (city) ckjl.setVar("系统-city", city);
+                if (city) ckjl.setVar("sys-city", city);
                 //告诉html界面步骤可以确认关闭
                 ckjl.formConfirmBack();
             }

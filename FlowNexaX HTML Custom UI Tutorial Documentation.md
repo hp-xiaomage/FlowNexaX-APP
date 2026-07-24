@@ -10,34 +10,34 @@ The four letters ckjl represent calls to the FlowNexaX API.
 ckjl.onJSError("Pass the error message to FlowNexaX and write it to the runtime log");
 
 // The getVar method is equivalent to getting the contents of a variable.
-ckjl.getVar("系统-字")
+ckjl.getVar("sys-字")
 
 // The setVar method sets the contents of a variable.
-ckjl.setVar("系统-字", "This content is set to the variable");
+ckjl.setVar("sys-字", "This content is set to the variable");
 // The setVar method sets the contents of a variable. Passing true means the variable content should be persisted. System variables are supported.
-ckjl.setVar("系统-字", "This content is set to the variable",true);
+ckjl.setVar("sys-字", "This content is set to the variable",true);
 // The setVar method sets the contents of a variable. The first true means the variable content should be persisted; the second true means the screenshot position should be stored before saving the image variable. System variables are supported.
-ckjl.setVar("系统-图", "image variable address",true,true);
+ckjl.setVar("sys-图", "image variable address",true,true);
 
-// The reqScreenshot method means you want to take a screenshot for the 系统-图 variable.
-ckjl.reqScreenshot("系统-图"); // If no screenshot type is passed, it defaults to screenshot.
-ckjl.reqScreenshot("系统-图","截图");
-ckjl.reqScreenshot("系统-图","截图并记录位置");
-ckjl.reqScreenshot("系统-图","不规则截图");
-ckjl.reqScreenshot("系统-图","不规则截图并记录位置");
+// The reqScreenshot method means you want to take a screenshot for the sys-图 variable.
+ckjl.reqScreenshot("sys-图"); // If no screenshot type is passed, it defaults to screenshot.
+ckjl.reqScreenshot("sys-图","screenshot");
+ckjl.reqScreenshot("sys-图","Take a screenshot and record the location");
+ckjl.reqScreenshot("sys-图","Irregular screenshots");
+ckjl.reqScreenshot("sys-图","Take irregular screenshots and record the location");
 
 
-// The reqScreenshotBack method is used together with reqScreenshot. It indicates that after you successfully take a screenshot for the 系统-图 variable, reqScreenshotBack will notify you that the screenshot succeeded and pass the screenshot image URL to you. vname is the variable name you used earlier in reqScreenshot("系统-图"), namely 系统-图.
+// The reqScreenshotBack method is used together with reqScreenshot. It indicates that after you successfully take a screenshot for the sys-图 variable, reqScreenshotBack will notify you that the screenshot succeeded and pass the screenshot image URL to you. vname is the variable name you used earlier in reqScreenshot("sys-图"), namely sys-图.
 function reqScreenshotBack(vname,url){}
 
-// The reqSelPoint method means you want to select a coordinate on the screen for the 系统-坐单 variable.
-ckjl.reqSelPoint("系统-坐单");
-// The reqSelPoint method means you want to select the upper-left and lower-right coordinates by drawing a rectangle on the screen for the multiple-coordinate variable 系统-坐多. Supported starting from version 4.4.9.
-ckjl.reqSelPoint("系统-坐多","框选左上和右下坐标");
-// The reqSelPoint method means you want to select multiple coordinates on the screen for the multiple-coordinate variable 系统-坐多. Supported starting from version 4.4.9.
-ckjl.reqSelPoint("系统-坐多");
+// The reqSelPoint method means you want to select a coordinate on the screen for the sys-坐单 variable.
+ckjl.reqSelPoint("sys-坐单");
+// The reqSelPoint method means you want to select the upper-left and lower-right coordinates by drawing a rectangle on the screen for the multiple-coordinate variable sys-坐多. Supported starting from version 4.4.9.
+ckjl.reqSelPoint("sys-坐多","Frame selection of upper left and lower right coordinates");
+// The reqSelPoint method means you want to select multiple coordinates on the screen for the multiple-coordinate variable sys-坐多. Supported starting from version 4.4.9.
+ckjl.reqSelPoint("sys-坐多");
 
-// The reqSelPointBack method is used together with reqSelPoint. It indicates that after you successfully select a coordinate on the screen for the 系统-坐单 variable, reqSelPointBack will notify you that the selection succeeded and pass the coordinate content pointContent to you. vname is the variable name you used earlier in reqSelPoint("系统-坐单"), namely 系统-坐单.
+// The reqSelPointBack method is used together with reqSelPoint. It indicates that after you successfully select a coordinate on the screen for the sys-坐单 variable, reqSelPointBack will notify you that the selection succeeded and pass the coordinate content pointContent to you. vname is the variable name you used earlier in reqSelPoint("sys-坐单"), namely sys-坐单.
 function reqSelPointBack(vname,pointContent){}
 
 
@@ -61,13 +61,13 @@ function reqSelPointBack(vname,pointContent){}
 ckjl.formZoom();
 
 // The addSysVar method adds system variables. Supported starting from version 4.5.5.
-ckjl.addSysVar(1,'系统-字','Demo Group','This is my default value');
-ckjl.addSysVar(2,'系统-数','Demo Group','1');
-ckjl.addSysVar(3,'系统-坐单','Demo Group','500,500');
-ckjl.addSysVar(4,'系统-坐多','Demo Group','100,200;400,400');
-ckjl.addSysVar(5,'系统-图','Demo Group');
-ckjl.addSysVar(1,'系统-字22');
-ckjl.addSysVar(6,'系统-时','Demo Group','08:22:58');
+ckjl.addSysVar(1,'sys-字','Demo Group','This is my default value');
+ckjl.addSysVar(2,'sys-数','Demo Group','1');
+ckjl.addSysVar(3,'sys-坐单','Demo Group','500,500');
+ckjl.addSysVar(4,'sys-坐多','Demo Group','100,200;400,400');
+ckjl.addSysVar(5,'sys-图','Demo Group');
+ckjl.addSysVar(1,'sys-字22');
+ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
 ```
 
 　
@@ -119,11 +119,11 @@ ckjl.addSysVar(6,'系统-时','Demo Group','08:22:58');
         //         getVar: function (key) {
         //             console.log("ckjl.getVar called with key:", key);
         //             // Return test data according to key.
-        //             if (key === "系统-mmm") return "Test Name";
-        //             if (key === "系统-分") return "male";
-        //             if (key === "系统-字") return "swimming,running";
+        //             if (key === "sys-mmm") return "Test Name";
+        //             if (key === "sys-分") return "male";
+        //             if (key === "sys-字") return "swimming,running";
         //             if (key === "city") return "Shanghai";
-        //             if (key === "系统-图") return "https://via.placeholder.com/100";
+        //             if (key === "sys-图") return "https://via.placeholder.com/100";
         //             return "";
         //         },
         //         setVar: function (key, value) {
@@ -175,35 +175,35 @@ ckjl.addSysVar(6,'系统-时','Demo Group','08:22:58');
         }
             function loadData() {
             // Demonstrate adding system variables. type values: 1 = string variable, 2 = number variable, 3 = single-coordinate variable, 4 = multiple-coordinate variable, 5 = image variable, 6 = time variable.
-            ckjl.addSysVar(1,'系统-mmm','Demo Group','This is my default value');
-               ckjl.addSysVar(1,'系统-分','Demo Group','female');
-               ckjl.addSysVar(1,'系统-字','Demo Group','running,music');
-               ckjl.addSysVar(5,'系统-图','Demo Group');
-               ckjl.addSysVar(3,'系统-坐单','Demo Group','500,500');
-               ckjl.addSysVar(4,'系统-坐多','Demo Group','100,200;400,400');
-               ckjl.addSysVar(1,'系统-city','Demo Group','Shanghai');
+            ckjl.addSysVar(1,'sys-mmm','Demo Group','This is my default value');
+               ckjl.addSysVar(1,'sys-分','Demo Group','female');
+               ckjl.addSysVar(1,'sys-字','Demo Group','running,music');
+               ckjl.addSysVar(5,'sys-图','Demo Group');
+               ckjl.addSysVar(3,'sys-坐单','Demo Group','500,500');
+               ckjl.addSysVar(4,'sys-坐多','Demo Group','100,200;400,400');
+               ckjl.addSysVar(1,'sys-city','Demo Group','Shanghai');
                // The addSysVar method above requires FlowNexaX version 4.5.5.
        
-                document.getElementById("name").value = ckjl.getVar("系统-mmm");
+                document.getElementById("name").value = ckjl.getVar("sys-mmm");
 
-                let gender = ckjl.getVar("系统-分");
+                let gender = ckjl.getVar("sys-分");
                 let gel=document.getElementById("gender_" + gender);
                 if(gel)gel.checked = true;
 
-                let hobbies = ckjl.getVar("系统-字").split(",");
+                let hobbies = ckjl.getVar("sys-字").split(",");
                 hobbies.forEach(hobby => {
                     let el = document.getElementById("hobby_" + hobby);
                     if(el)el.checked = true;
                 });
 
                 // Echo the city.
-                let city = ckjl.getVar("系统-city");
+                let city = ckjl.getVar("sys-city");
                 if (city) {
                     document.getElementById("cityDisplay").innerText = city;
                     document.getElementById("cityDropdown").setAttribute("data-value", city);
                 }
 
-                let avatar = ckjl.getVar("系统-图");
+                let avatar = ckjl.getVar("sys-图");
                 if (avatar) {
                     document.getElementById("avatar_img").src = avatar;
                 }
@@ -221,7 +221,7 @@ ckjl.addSysVar(6,'系统-时','Demo Group','08:22:58');
             }
 
             function requestAvatar() {
-                ckjl.reqScreenshot("系统-图");
+                ckjl.reqScreenshot("sys-图");
             }
 
             function reqScreenshotBack(vname,url) {
@@ -229,7 +229,7 @@ ckjl.addSysVar(6,'系统-时','Demo Group','08:22:58');
             }
 
              function requestPoint() {
-                ckjl.reqSelPoint("系统-坐单");
+                ckjl.reqSelPoint("sys-坐单");
             }
 
             function reqSelPointBack(vname,pointContent) {
@@ -237,10 +237,10 @@ ckjl.addSysVar(6,'系统-时','Demo Group','08:22:58');
                 document.getElementById("name").value = pointContent;
             }
               function requestPoints() {
-                ckjl.reqSelPoint("系统-坐多");
+                ckjl.reqSelPoint("sys-坐多");
             }
             function requestPointarea() {
-                ckjl.reqSelPoint("系统-坐多","框选左上和右下坐标");
+                ckjl.reqSelPoint("sys-坐多","Frame selection of upper left and lower right coordinates");
             }
 
 
@@ -258,17 +258,17 @@ ckjl.addSysVar(6,'系统-时','Demo Group','08:22:58');
 
             function submitForm() {
             // Set all configured contents into variables.
-                ckjl.setVar("系统-mmm", document.getElementById("name").value);
+                ckjl.setVar("sys-mmm", document.getElementById("name").value);
 
                 let gender = document.querySelector("input[name='gender']:checked");
-                if (gender) ckjl.setVar("系统-分", gender.value);
+                if (gender) ckjl.setVar("sys-分", gender.value);
 
                 let selectedHobbies = Array.from(document.querySelectorAll("input[name='hobby']:checked"))
                     .map(el => el.value).join(",");
-                ckjl.setVar("系统-字", selectedHobbies);
+                ckjl.setVar("sys-字", selectedHobbies);
 
                 let city = document.getElementById("cityDropdown").getAttribute("data-value");
-                if (city) ckjl.setVar("系统-city", city);
+                if (city) ckjl.setVar("sys-city", city);
                 // Tell the HTML interface step that it can confirm and close.
                 ckjl.formConfirmBack();
             }

@@ -8,9 +8,8 @@ By writing JS code, you can implement the most flexible script logic control and
 
 > Writing JS code requires basic knowledge of the JavaScript language. You can search online to learn it, for example:
 >
-> * JavaScript Language Introduction Tutorial: [https://wangdoc.com/javascript/](https://wangdoc.com/javascript/)
-> * JavaScript Tutorial: [https://www.runoob.com/js/js-tutorial.html](https://www.runoob.com/js/js-tutorial.html)
-> * JS Beginner Tutorial: [http://c.biancheng.net/js/](http://c.biancheng.net/js/)
+> * JavaScript Language Introduction Tutorial: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+> * JavaScript Tutorial: [https://javascript.info/](https://javascript.info/)
 
 In addition to the general capabilities of the JS engine, FlowNexaX also extends the following capabilities:
 

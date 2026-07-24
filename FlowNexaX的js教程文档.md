@@ -8,9 +8,8 @@
 
 > 编写 JS 代码需要有 JS 代码语言基础，可以从网上搜索学习。如：
 >
-> * JavaScript 语言入门教程: [https://wangdoc.com/javascript/](https://wangdoc.com/javascript/)
-> * JavaScript 教程: [https://www.runoob.com/js/js-tutorial.html](https://www.runoob.com/js/js-tutorial.html)
-> * JS 入门教程: [http://c.biancheng.net/js/](http://c.biancheng.net/js/)
+> * JavaScript 语言入门教程: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide](https://wangdoc.com/javascript/)
+> * JavaScript 教程: [https://javascript.info/](https://www.runoob.com/js/js-tutorial.html)
 
 除了 JS 引擎通用能力外，FlowNexaX内还扩展了以下能力：
 
