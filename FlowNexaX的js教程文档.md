@@ -558,17 +558,45 @@ log('请求返回的内容：'+ content);
 
 ```js
 
-// 使用url scheme打开目标APP指定页面，可以直接打开快手、抖音等APP某个直播页面或者其他页面，前提是快手、抖音支持用意图行为打开。
+// 使用 URL scheme 打开目标 APP 的指定页面。例如，可以打开国际常用 APP 中的聊天、主页、视频、地图、邮件或拨号页面，前提是目标 APP 支持对应的 URL scheme 或意图行为。
 startActivity({
-     data: "目标APP url scheme",
-});
-例如打开指定QQ聊天界面：
-startActivity({
-     data: "mqqwpa://im/chat?chat_type=wpa&uin=张三的QQ号",
+     data: "目标 APP URL scheme",
 });
 
-抖音、快手等常见APP跳转链接
-https://blog.csdn.net/qq_23857415/article/details/134778701?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-3-134778701-blog-108361386.235%5Ev43%5Epc_blog_bottom_relevance_base7&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-3-134778701-blog-108361386.235%5Ev43%5Epc_blog_bottom_relevance_base7&utm_relevant_index=4
+// 示例：打开 WhatsApp 聊天。
+startActivity({
+     data: "whatsapp://send?phone=15551234567",
+});
+
+// 示例：打开 Telegram 用户或频道。
+startActivity({
+     data: "tg://resolve?domain=telegram",
+});
+
+// 示例：打开 Instagram 主页。
+startActivity({
+     data: "instagram://user?username=instagram",
+});
+
+// 示例：打开 YouTube 页面。
+startActivity({
+     data: "youtube://www.youtube.com/@YouTube",
+});
+
+// 示例：在地图 APP 中打开位置。
+startActivity({
+     data: "geo:0,0?q=Times+Square+New+York",
+});
+
+// 示例：打开邮件 APP。
+startActivity({
+     data: "mailto:support@example.com?subject=Hello",
+});
+
+// 示例：打开拨号页面。
+startActivity({
+     data: "tel:+15551234567",
+});
 ```
 
 　
@@ -667,10 +695,6 @@ keyPressCode("键码数字");
 ![img](ckjl/1735783902327_106.png)
 ![img](ckjl/1735783910243_107.png)
 
-
-//蜂群的键码参考
-● 按键码参考地址: https://blog.csdn.net/u011119684/article/details/124978540
-● 需要配合服务端链接使用。
 
 ```
 

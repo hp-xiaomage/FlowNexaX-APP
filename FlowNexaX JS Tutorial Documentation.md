@@ -256,9 +256,9 @@ var result = findLocation({
   bottom: '60%', // Limit the bottom side of the search area. Pixels, dp, and percentages are supported.
   like: true,  // Fill true for fuzzy matching; false for exact matching.
   pre: '512', // Extract a custom color. Custom colors require version 4.3.8.
-  r: 3, // Required for extracting a custom color. rgb is the color value; search Baidu for RGB color values.
-  g: 202, // Required for extracting a custom color. rgb is the color value; search Baidu for RGB color values.
-  b: 99, // Required for extracting a custom color. rgb is the color value; search Baidu for RGB color values.
+  r: 3, // Required for extracting a custom color. rgb is the color value; search Google for RGB color values.
+  g: 202, // Required for extracting a custom color. rgb is the color value; search Google for RGB color values.
+  b: 99, // Required for extracting a custom color. rgb is the color value; search Google for RGB color values.
   sim: 80,  // Text similarity percentage. Fill 80 to require recognized text content to reach 80% similarity.
 },true);// The true here means finding all positions.
 var location = JSON.parse(result);// Format as JSON.
@@ -469,9 +469,9 @@ var result = getScreenText({
   right: '800', // Limit the right side of the search area. Pixels, dp, and percentages are supported.
   bottom: '60%', // Limit the bottom side of the search area. Pixels, dp, and percentages are supported.
   pre: '512', // Extract a custom color. Custom colors require version 4.3.8.
-  r: 3, // Required for extracting a custom color. rgb is the color value; search Baidu for RGB color values.
-  g: 202, // Required for extracting a custom color. rgb is the color value; search Baidu for RGB color values.
-  b: 99, // Required for extracting a custom color. rgb is the color value; search Baidu for RGB color values.
+  r: 3, // Required for extracting a custom color. rgb is the color value; search Google for RGB color values.
+  g: 202, // Required for extracting a custom color. rgb is the color value; search Google for RGB color values.
+  b: 99, // Required for extracting a custom color. rgb is the color value; search Google for RGB color values.
 });
 var texts=JSON.parse(result);
 for (var i=0;i<texts.length;i++)
@@ -541,7 +541,7 @@ var configParamStr = JSON.stringify(configParamObj);
 
 // Send the request.
 var result = requestUrl({ 
-    url: 'http://www.baidu.com', 
+    url: 'http://www.google.com', 
     method: 'POST', 
     // Directly pass the serialized string.
     inputParam: requestBodyStr, // Request body input parameter.
@@ -560,17 +560,45 @@ You can open a specified page in the target app.
 
 ```js
 
-// Use a URL scheme to open a specified page in the target app. You can directly open a live page or other page in apps such as Kuaishou and Douyin, provided that Kuaishou and Douyin support opening via intent behavior.
+// Use a URL scheme to open a specified page in the target app. For example, you can open chat, profile, video, map, email, or phone pages in commonly used international apps, provided that the target app supports the corresponding URL scheme or intent behavior.
 startActivity({
      data: "target app URL scheme",
 });
-Example: open a specified QQ chat interface:
+
+// Example: open a WhatsApp chat.
 startActivity({
-     data: "mqqwpa://im/chat?chat_type=wpa&uin=Zhang San's QQ number",
+     data: "whatsapp://send?phone=15551234567",
 });
 
-Links for jumping in common apps such as Douyin and Kuaishou:
-https://blog.csdn.net/qq_23857415/article/details/134778701?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-3-134778701-blog-108361386.235%5Ev43%5Epc_blog_bottom_relevance_base7&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-3-134778701-blog-108361386.235%5Ev43%5Epc_blog_bottom_relevance_base7&utm_relevant_index=4
+// Example: open a Telegram user or channel.
+startActivity({
+     data: "tg://resolve?domain=telegram",
+});
+
+// Example: open an Instagram profile.
+startActivity({
+     data: "instagram://user?username=instagram",
+});
+
+// Example: open a YouTube page.
+startActivity({
+     data: "youtube://www.youtube.com/@YouTube",
+});
+
+// Example: open a location in the map app.
+startActivity({
+     data: "geo:0,0?q=Times+Square+New+York",
+});
+
+// Example: open the email app.
+startActivity({
+     data: "mailto:support@example.com?subject=Hello",
+});
+
+// Example: open the phone dialer.
+startActivity({
+     data: "tel:+15551234567",
+});
 ```
 
 　
@@ -635,7 +663,7 @@ runRoot("input keyevent 82");
 // Press the Lock Screen key.
 runRoot("input keyevent 26");
 
-For many more commands, search Baidu for: common Android adb commands.
+For many more commands, search Google for: common Android adb commands.
 
 Features supported starting from version 4.3.7:
 var result=adbWithResult("your root command");
@@ -670,10 +698,6 @@ Address: https://vimsky.com/examples/usage/arduino-language-functions-usb-keyboa
 ![img](ckjl/[银行卡]_107.png)
 
 
-// Fengqun keycode reference:
-● Keycode reference address: https://blog.csdn.net/u011119684/article/details/124978540
-● Must be used together with a server connection.
-
 ```
 
 　
@@ -683,7 +707,7 @@ Address: https://vimsky.com/examples/usage/arduino-language-functions-usb-keyboa
 ```js
 
 // Basic link opening.
-openLink({ data: "https://www.baidu.com" });
+openLink({ data: "https://www.google.com" });
 
 
 // Single parameter: only pass the key name.

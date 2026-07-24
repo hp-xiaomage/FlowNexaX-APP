@@ -10,34 +10,34 @@ The four letters ckjl represent calls to the FlowNexaX API.
 ckjl.onJSError("Pass the error message to FlowNexaX and write it to the runtime log");
 
 // The getVar method is equivalent to getting the contents of a variable.
-ckjl.getVar("sys-字")
+ckjl.getVar("sys-text")
 
 // The setVar method sets the contents of a variable.
-ckjl.setVar("sys-字", "This content is set to the variable");
+ckjl.setVar("sys-text", "This content is set to the variable");
 // The setVar method sets the contents of a variable. Passing true means the variable content should be persisted. System variables are supported.
-ckjl.setVar("sys-字", "This content is set to the variable",true);
+ckjl.setVar("sys-text", "This content is set to the variable",true);
 // The setVar method sets the contents of a variable. The first true means the variable content should be persisted; the second true means the screenshot position should be stored before saving the image variable. System variables are supported.
-ckjl.setVar("sys-图", "image variable address",true,true);
+ckjl.setVar("sys-image", "image variable address",true,true);
 
-// The reqScreenshot method means you want to take a screenshot for the sys-图 variable.
-ckjl.reqScreenshot("sys-图"); // If no screenshot type is passed, it defaults to screenshot.
-ckjl.reqScreenshot("sys-图","screenshot");
-ckjl.reqScreenshot("sys-图","Take a screenshot and record the location");
-ckjl.reqScreenshot("sys-图","Irregular screenshots");
-ckjl.reqScreenshot("sys-图","Take irregular screenshots and record the location");
+// The reqScreenshot method means you want to take a screenshot for the sys-image variable.
+ckjl.reqScreenshot("sys-image"); // If no screenshot type is passed, it defaults to screenshot.
+ckjl.reqScreenshot("sys-image","screenshot");
+ckjl.reqScreenshot("sys-image","Take a screenshot and record the location");
+ckjl.reqScreenshot("sys-image","Irregular screenshots");
+ckjl.reqScreenshot("sys-image","Take irregular screenshots and record the location");
 
 
-// The reqScreenshotBack method is used together with reqScreenshot. It indicates that after you successfully take a screenshot for the sys-图 variable, reqScreenshotBack will notify you that the screenshot succeeded and pass the screenshot image URL to you. vname is the variable name you used earlier in reqScreenshot("sys-图"), namely sys-图.
+// The reqScreenshotBack method is used together with reqScreenshot. It indicates that after you successfully take a screenshot for the sys-image variable, reqScreenshotBack will notify you that the screenshot succeeded and pass the screenshot image URL to you. vname is the variable name you used earlier in reqScreenshot("sys-image"), namely sys-image.
 function reqScreenshotBack(vname,url){}
 
-// The reqSelPoint method means you want to select a coordinate on the screen for the sys-坐单 variable.
-ckjl.reqSelPoint("sys-坐单");
-// The reqSelPoint method means you want to select the upper-left and lower-right coordinates by drawing a rectangle on the screen for the multiple-coordinate variable sys-坐多. Supported starting from version 4.4.9.
-ckjl.reqSelPoint("sys-坐多","Frame selection of upper left and lower right coordinates");
-// The reqSelPoint method means you want to select multiple coordinates on the screen for the multiple-coordinate variable sys-坐多. Supported starting from version 4.4.9.
-ckjl.reqSelPoint("sys-坐多");
+// The reqSelPoint method means you want to select a coordinate on the screen for the sys-point variable.
+ckjl.reqSelPoint("sys-point");
+// The reqSelPoint method means you want to select the upper-left and lower-right coordinates by drawing a rectangle on the screen for the multiple-coordinate variable sys-points. Supported starting from version 4.4.9.
+ckjl.reqSelPoint("sys-points","Frame selection of upper left and lower right coordinates");
+// The reqSelPoint method means you want to select multiple coordinates on the screen for the multiple-coordinate variable sys-points. Supported starting from version 4.4.9.
+ckjl.reqSelPoint("sys-points");
 
-// The reqSelPointBack method is used together with reqSelPoint. It indicates that after you successfully select a coordinate on the screen for the sys-坐单 variable, reqSelPointBack will notify you that the selection succeeded and pass the coordinate content pointContent to you. vname is the variable name you used earlier in reqSelPoint("sys-坐单"), namely sys-坐单.
+// The reqSelPointBack method is used together with reqSelPoint. It indicates that after you successfully select a coordinate on the screen for the sys-point variable, reqSelPointBack will notify you that the selection succeeded and pass the coordinate content pointContent to you. vname is the variable name you used earlier in reqSelPoint("sys-point"), namely sys-point.
 function reqSelPointBack(vname,pointContent){}
 
 
@@ -61,13 +61,13 @@ function reqSelPointBack(vname,pointContent){}
 ckjl.formZoom();
 
 // The addSysVar method adds system variables. Supported starting from version 4.5.5.
-ckjl.addSysVar(1,'sys-字','Demo Group','This is my default value');
-ckjl.addSysVar(2,'sys-数','Demo Group','1');
-ckjl.addSysVar(3,'sys-坐单','Demo Group','500,500');
-ckjl.addSysVar(4,'sys-坐多','Demo Group','100,200;400,400');
-ckjl.addSysVar(5,'sys-图','Demo Group');
-ckjl.addSysVar(1,'sys-字22');
-ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
+ckjl.addSysVar(1,'sys-text','Demo Group','This is my default value');
+ckjl.addSysVar(2,'sys-number','Demo Group','1');
+ckjl.addSysVar(3,'sys-point','Demo Group','500,500');
+ckjl.addSysVar(4,'sys-points','Demo Group','100,200;400,400');
+ckjl.addSysVar(5,'sys-image','Demo Group');
+ckjl.addSysVar(1,'sys-text22');
+ckjl.addSysVar(6,'sys-time','Demo Group','08:22:58');
 ```
 
 　
@@ -120,10 +120,10 @@ ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
         //             console.log("ckjl.getVar called with key:", key);
         //             // Return test data according to key.
         //             if (key === "sys-mmm") return "Test Name";
-        //             if (key === "sys-分") return "male";
-        //             if (key === "sys-字") return "swimming,running";
+        //             if (key === "sys-gender") return "male";
+        //             if (key === "sys-text") return "swimming,running";
         //             if (key === "city") return "Shanghai";
-        //             if (key === "sys-图") return "https://via.placeholder.com/100";
+        //             if (key === "sys-image") return "https://via.placeholder.com/100";
         //             return "";
         //         },
         //         setVar: function (key, value) {
@@ -176,21 +176,21 @@ ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
             function loadData() {
             // Demonstrate adding system variables. type values: 1 = string variable, 2 = number variable, 3 = single-coordinate variable, 4 = multiple-coordinate variable, 5 = image variable, 6 = time variable.
             ckjl.addSysVar(1,'sys-mmm','Demo Group','This is my default value');
-               ckjl.addSysVar(1,'sys-分','Demo Group','female');
-               ckjl.addSysVar(1,'sys-字','Demo Group','running,music');
-               ckjl.addSysVar(5,'sys-图','Demo Group');
-               ckjl.addSysVar(3,'sys-坐单','Demo Group','500,500');
-               ckjl.addSysVar(4,'sys-坐多','Demo Group','100,200;400,400');
+               ckjl.addSysVar(1,'sys-gender','Demo Group','female');
+               ckjl.addSysVar(1,'sys-text','Demo Group','running,music');
+               ckjl.addSysVar(5,'sys-image','Demo Group');
+               ckjl.addSysVar(3,'sys-point','Demo Group','500,500');
+               ckjl.addSysVar(4,'sys-points','Demo Group','100,200;400,400');
                ckjl.addSysVar(1,'sys-city','Demo Group','Shanghai');
                // The addSysVar method above requires FlowNexaX version 4.5.5.
        
                 document.getElementById("name").value = ckjl.getVar("sys-mmm");
 
-                let gender = ckjl.getVar("sys-分");
+                let gender = ckjl.getVar("sys-gender");
                 let gel=document.getElementById("gender_" + gender);
                 if(gel)gel.checked = true;
 
-                let hobbies = ckjl.getVar("sys-字").split(",");
+                let hobbies = ckjl.getVar("sys-text").split(",");
                 hobbies.forEach(hobby => {
                     let el = document.getElementById("hobby_" + hobby);
                     if(el)el.checked = true;
@@ -203,7 +203,7 @@ ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
                     document.getElementById("cityDropdown").setAttribute("data-value", city);
                 }
 
-                let avatar = ckjl.getVar("sys-图");
+                let avatar = ckjl.getVar("sys-image");
                 if (avatar) {
                     document.getElementById("avatar_img").src = avatar;
                 }
@@ -221,7 +221,7 @@ ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
             }
 
             function requestAvatar() {
-                ckjl.reqScreenshot("sys-图");
+                ckjl.reqScreenshot("sys-image");
             }
 
             function reqScreenshotBack(vname,url) {
@@ -229,7 +229,7 @@ ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
             }
 
              function requestPoint() {
-                ckjl.reqSelPoint("sys-坐单");
+                ckjl.reqSelPoint("sys-point");
             }
 
             function reqSelPointBack(vname,pointContent) {
@@ -237,10 +237,10 @@ ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
                 document.getElementById("name").value = pointContent;
             }
               function requestPoints() {
-                ckjl.reqSelPoint("sys-坐多");
+                ckjl.reqSelPoint("sys-points");
             }
             function requestPointarea() {
-                ckjl.reqSelPoint("sys-坐多","Frame selection of upper left and lower right coordinates");
+                ckjl.reqSelPoint("sys-points","Frame selection of upper left and lower right coordinates");
             }
 
 
@@ -261,11 +261,11 @@ ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
                 ckjl.setVar("sys-mmm", document.getElementById("name").value);
 
                 let gender = document.querySelector("input[name='gender']:checked");
-                if (gender) ckjl.setVar("sys-分", gender.value);
+                if (gender) ckjl.setVar("sys-gender", gender.value);
 
                 let selectedHobbies = Array.from(document.querySelectorAll("input[name='hobby']:checked"))
                     .map(el => el.value).join(",");
-                ckjl.setVar("sys-字", selectedHobbies);
+                ckjl.setVar("sys-text", selectedHobbies);
 
                 let city = document.getElementById("cityDropdown").getAttribute("data-value");
                 if (city) ckjl.setVar("sys-city", city);
@@ -293,9 +293,9 @@ ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
     <input type="radio" name="gender" id="gender_female" value="female">Female<br>
 
     Hobbies:
-    <input type="checkbox" name="hobby" id="hobby_游泳" value="游泳">Swimming
-    <input type="checkbox" name="hobby" id="hobby_跑步" value="跑步">Running
-    <input type="checkbox" name="hobby" id="hobby_音乐" value="音乐">Music<br>
+    <input type="checkbox" name="hobby" id="hobby_Swimming" value="Swimming">Swimming
+    <input type="checkbox" name="hobby" id="hobby_Running" value="Running">Running
+    <input type="checkbox" name="hobby" id="hobby_Music" value="Music">Music<br>
 
     <img id="avatar_img" width="100" height="100"><br>
     <button onclick="requestAvatar()">Select Avatar</button><br><br>
@@ -308,9 +308,9 @@ ckjl.addSysVar(6,'sys-时','Demo Group','08:22:58');
     <div class="dropdown" id="cityDropdown" onclick="toggleCityOptions()" data-value="">
         <span id="cityDisplay">Please select a city</span>
         <div id="cityOptions" class="dropdown-options">
-            <div onclick="selectCity('北京')">Beijing</div>
-            <div onclick="selectCity('上海')">Shanghai</div>
-            <div onclick="selectCity('深圳')">Shenzhen</div>
+            <div onclick="selectCity('New York')">New York</div>
+            <div onclick="selectCity('London')">London</div>
+            <div onclick="selectCity('Tokyo')">Tokyo</div>
         </div>
     </div><br><br>
 
